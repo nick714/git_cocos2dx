@@ -1,7 +1,7 @@
 #pragma once
 #include "cocos2d.h"
 #include "cocos-ext.h"
-class TableViewLayer : public cocos2d::CCLayer ,public cocos2d::extension::CCTableViewDataSource ,public cocos2d::extension::CCTableViewDelegate
+class TableViewLayer : public cocos2d::CCLayerColor ,public cocos2d::extension::CCTableViewDataSource ,public cocos2d::extension::CCTableViewDelegate
 {
 public:
 	TableViewLayer(void);

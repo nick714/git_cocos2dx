@@ -15,17 +15,18 @@ TableViewLayer::~TableViewLayer(void)
 
 bool TableViewLayer::init()
 {
-	if (!CCLayer::init())
+	if (!CCLayerColor::initWithColor(ccc4(0 ,38,69,255)))
 	{
 		return false;
 	}
 	CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-	CCTableView *tableView = CCTableView::create(this ,CCSizeMake(800 ,480));
+	CCTableView *tableView = CCTableView::create(this ,CCSizeMake(800 ,376));
 
 	tableView->setDirection(kCCScrollViewDirectionHorizontal);
 
 	//tableView->setPosition(CCPointMake(20,winSize.height/2-30));
-	//tableView->setPosition(VisibleRect::leftBottom());
+	tableView->setPosition(CCPointMake(0 ,100 ));
+	//tableView->setVerticalFillOrder(kCCTableViewFillTopDown);
 	tableView->setDelegate(this);
 	this->addChild(tableView);
 
@@ -43,7 +44,7 @@ void TableViewLayer::tableCellTouched(CCTableView* table, CCTableViewCell* cell)
 
 CCSize TableViewLayer::cellSizeForTable(CCTableView *table)
 {
-    return CCSizeMake(220,276);
+    return CCSizeMake(220,376);
 }
 
 CCTableViewCell* TableViewLayer::tableCellAtIndex(CCTableView *table, unsigned int idx)
@@ -53,12 +54,11 @@ CCTableViewCell* TableViewLayer::tableCellAtIndex(CCTableView *table, unsigned i
 	CCTableViewCell *cell = table->dequeueCell();
 	if (!cell)
 	{
-		CCLOG("--------tableview index %d:" + idx);
 		cell = new NewTableViewCell();
 		cell->autorelease();
 		/*CCSpriteFrame *frame =  CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("item_match.png");
 		CCSprite *sprite = CCSprite::createWithSpriteFrame(frame);*/
-		CCSprite *sprite =  CCSprite::create("login/btn_friend.png");
+		CCSprite *sprite =  CCSprite::create("login/laizi_login.png");
 		/*if (idx == 0)
 		{
 		 sprite = CCSprite::create("login/laizi_login.png");
@@ -77,8 +77,9 @@ CCTableViewCell* TableViewLayer::tableCellAtIndex(CCTableView *table, unsigned i
 		} else {
 			sprite = CCSprite::create("login/more_login.png");
 		}*/
+		//sprite->setContentSize(CCSizeMake(100 ,180));
 		sprite->setAnchorPoint(CCPointZero);
-        sprite->setPosition(CCPointMake(0, 0));
+        sprite->setPosition(CCPointZero);
         cell->addChild(sprite);
 	}
 	return cell;
@@ -86,6 +87,6 @@ CCTableViewCell* TableViewLayer::tableCellAtIndex(CCTableView *table, unsigned i
 
 unsigned int TableViewLayer::numberOfCellsInTableView(CCTableView *table)
 {
-    return 6;
+    return 20;
 }
 

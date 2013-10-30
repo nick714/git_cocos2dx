@@ -20,6 +20,7 @@ CCScene* HelloWorld::scene()
 
 		TableViewLayer *tableLayer = TableViewLayer::create();
 		CC_BREAK_IF(! tableLayer);
+		tableLayer->setPosition(ccp(0 ,0));
 
 		scene->addChild(tableLayer);
     } while (0);
