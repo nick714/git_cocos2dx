@@ -8,7 +8,9 @@ public:
 	~TableViewLayer(void);
 	virtual bool init();
 
+	cocos2d::CCSpriteFrame* getFrameByIndex(unsigned int idx);
 
+	cocos2d::CCSpriteFrame* getCaptionByIndex(unsigned int idx);
 
 	CREATE_FUNC(TableViewLayer);
 

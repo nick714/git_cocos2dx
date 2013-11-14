@@ -13,6 +13,12 @@
       <UniqueIdentifier>{e423c0a6-29af-4f20-b216-000cc2cc9411}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;png;manifest</Extensions>
     </Filter>
+    <Filter Include="include\login">
+      <UniqueIdentifier>{f3fba8d5-3d43-4c8d-9f23-b1c7d6005014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\login">
+      <UniqueIdentifier>{3b63af90-6b35-4ee6-953f-92849bbc05d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\GamePlayer.ico">
@@ -27,6 +33,9 @@
     <None Include="..\Resources\HelloWorld.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="D:\cocos2d-2.0-x-2.0.4\cocos2dx\proj.win32\cocos2d.vcproj" />
+    <None Include="D:\cocos2d-2.0-x-2.0.4\cocos2dx\proj.win32\cocos2d.vcxproj" />
+    <None Include="D:\cocos2d-2.0-x-2.0.4\cocos2dx\proj.win32\cocos2d.vcxproj.filters" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GamePlayer.rc">
@@ -58,11 +67,17 @@
     <ClInclude Include="NewTableViewCell.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="TableViewLayer.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="DDZResources.h">
       <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginBottomLayer.h">
+      <Filter>include\login</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginTopLayer.h">
+      <Filter>include\login</Filter>
+    </ClInclude>
+    <ClInclude Include="TableViewLayer.h">
+      <Filter>include\login</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -81,8 +96,14 @@
     <ClCompile Include="NewTableViewCell.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="LoginTopLayer.cpp">
+      <Filter>source\login</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginBottomLayer.cpp">
+      <Filter>source\login</Filter>
+    </ClCompile>
     <ClCompile Include="TableViewLayer.cpp">
-      <Filter>source</Filter>
+      <Filter>source\login</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

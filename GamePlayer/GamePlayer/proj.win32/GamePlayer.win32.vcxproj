@@ -125,6 +125,9 @@
     <None Include="..\Resources\CloseNormal.png" />
     <None Include="..\Resources\CloseSelected.png" />
     <None Include="..\Resources\HelloWorld.png" />
+    <None Include="D:\cocos2d-2.0-x-2.0.4\cocos2dx\proj.win32\cocos2d.vcproj" />
+    <None Include="D:\cocos2d-2.0-x-2.0.4\cocos2dx\proj.win32\cocos2d.vcxproj" />
+    <None Include="D:\cocos2d-2.0-x-2.0.4\cocos2dx\proj.win32\cocos2d.vcxproj.filters" />
     <None Include="res\GamePlayer.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +138,8 @@
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\VisibleRect.h" />
     <ClInclude Include="DDZResources.h" />
+    <ClInclude Include="LoginBottomLayer.h" />
+    <ClInclude Include="LoginTopLayer.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="NewTableViewCell.h" />
     <ClInclude Include="resource.h" />
@@ -146,6 +151,8 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\VisibleRect.cpp" />
+    <ClCompile Include="LoginBottomLayer.cpp" />
+    <ClCompile Include="LoginTopLayer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NewTableViewCell.cpp" />
     <ClCompile Include="TableViewLayer.cpp" />

@@ -1,5 +1,7 @@
 #include "HelloWorldScene.h"
 #include "TableViewLayer.h"
+#include "LoginTopLayer.h"
+#include "LoginBottomLayer.h"
 using namespace cocos2d;
 
 CCScene* HelloWorld::scene()
@@ -23,6 +25,19 @@ CCScene* HelloWorld::scene()
 		tableLayer->setPosition(ccp(0 ,0));
 
 		scene->addChild(tableLayer);
+
+		LoginTopLayer *pLoginTopLayer = LoginTopLayer::create();
+		CC_BREAK_IF(! pLoginTopLayer);
+		pLoginTopLayer->setPosition(CCPointMake(0 ,402));
+		pLoginTopLayer->setAnchorPoint(CCPointZero);
+		scene->addChild(pLoginTopLayer);
+
+		LoginBottomLayer *pBottomLayer = LoginBottomLayer::create();
+		CC_BREAK_IF(! pBottomLayer);
+		pBottomLayer->setPosition(CCPointMake(0 ,0));
+		pBottomLayer->setAnchorPoint(CCPointZero);
+		scene->addChild(pBottomLayer);
+
     } while (0);
 
     // return the scene
